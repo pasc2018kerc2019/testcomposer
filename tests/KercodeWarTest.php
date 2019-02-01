@@ -4,7 +4,23 @@ use PHPUnit\Framework\TestCase;
 
 class KercodeWarTest extends Testcase
 {
+    const WEEKDAYS = [
+        1=>'Sunday',
+        2=>'Monday',
+        3=>'Tuesday',
+        4=>'Wednesday',
+        5=>'Thursday',
+        6=>'Friday',
+        7=>'Saturday',
+    ];
+
     public function testWeekdays()
+    {
+        foreach (self::WEEKDAYS as $key => $value) {
+            $this->assertEquals($value, KercodeWar::weekday($key));
+        }
+    }
+    /*public function testWeekdays()
     {
         $this->assertequals('Sunday', KercodeWar::weekday(1));
         $this->assertequals('Monday', KercodeWar::weekday(2));
@@ -34,6 +50,15 @@ class KercodeWarTest extends Testcase
         $this->assertequals(false, KercodeWar::isweekend(6));
         $this->assertequals(true, KercodeWar::isweekend(7));
 
+    }*/
+    public function testNumberInWeekend()
+    {
+        
+        foreach(self::WEEKDAYS as $key => $value) {
+            $bool = ($value === 'Sunday' or  $value ==='Saturday');
+            $this->assertEquals($bool, KercodeWar::isweekend($key));
+        }
     }
 
+    
 }
