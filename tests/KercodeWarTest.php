@@ -24,4 +24,16 @@ class KercodeWarTest extends Testcase
 
         );
     }
+    public function testWeekend()
+    {
+        $this->assertequals(true, KercodeWar::isweekend(1));
+        $this->assertequals(false, KercodeWar::isweekend(2));
+        $this->assertequals(false, KercodeWar::isweekend(3));
+        $this->assertequals(false, KercodeWar::isweekend(4));
+        $this->assertequals(false, KercodeWar::isweekend(5));
+        $this->assertequals(false, KercodeWar::isweekend(6));
+        $this->assertequals(true, KercodeWar::isweekend(7));
+
+    }
+
 }

@@ -30,4 +30,18 @@ class KercodeWar
             return 'Wrong,please enter a number between 1 à 7';
         }
     }
-}
+    
+    public static function isweekend($number){
+        if ($number===1 OR $number===7){
+            return true;
+        }
+
+        
+        
+        else {
+            return false;
+        }
+
+
+    }
+   }
