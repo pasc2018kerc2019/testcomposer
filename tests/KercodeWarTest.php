@@ -13,6 +13,21 @@ class KercodeWarTest extends Testcase
         6=>'Friday',
         7=>'Saturday',
     ];
+    const FRENCH_WEEKDAYS = [
+        1=>'Dimanche',
+        2=>'Lundi',
+        3=>'Mardi',
+        4=>'Mercredi',
+        5=>'Jeudi',
+        6=>'Vendredi',
+        7=>'Samedi',
+    ];
+    public function testWeekdaysInFrench()
+    {
+        foreach (self::FRENCH_WEEKDAYS as $key => $value) {
+            $this->assertEquals($value, KercodeWar::weekday($key,'fr'));
+        }
+    }
 
     public function testWeekdays()
     {
