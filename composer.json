@@ -1,0 +1,12 @@
+{
+    "name": "kercode/testcomposer",
+    "authors": [
+        {
+            "name": "pasc2018kerc2019",
+            "email": "folgofirst@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^8.0"
+    }
+}
